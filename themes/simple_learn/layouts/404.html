@@ -1,0 +1,53 @@
+{{ define "breadcrumb" }}
+<h1 class="title">This is some kind of 404 embarrassment....</h1>
+{{end}}
+
+
+{{ define "main" }}
+Why wouldn't you check one of this page and forget about what you've just seen ?
+<input id="random_original_content" type="hidden" value="{{.Pages|jsonify}}"/>
+<div id="random-pages">abc.</div>
+<script>
+    var pages = JSON.parse(document.querySelector('#random_original_content').value);
+    //get 5 random pages.
+    var randomPages = [];
+    while (randomPages.length < 5 && pages.length > 0) {
+        var randomIndex = Math.floor(Math.random() * pages.length);
+        randomPages.push(pages[randomIndex]);
+        pages.splice(randomIndex, 1); // Remove the selected page to avoid duplicates
+    }
+    console.log(randomPages);
+    var container = document.getElementById('random-pages');
+    randomPages.forEach(function (page) {
+        var link = document.createElement('a');
+        link.href = page.Path;
+        link.innerHTML = toTitle(page);
+        link.className = 'block text-blue-500 hover:underline';
+        console.log(link)
+
+        container.append(link);
+    });
+
+    function toTitle(page) {
+
+        let title = page.Title || page.LinkTitle;
+        // add prefix depending on kind
+        if (page.Kind === 'section') {
+            title = "Section: " + title;
+        } else if (page.Kind === 'term') {
+            title = "#" + title;
+        } else if (page.Kind === 'page') {
+            title = "Page: " + title;
+        }
+        return title;
+    }
+
+    function coalesce() {
+        return [].find.call(arguments, x => x !== null && x !== undefined);
+    }
+
+
+</script>
+
+
+{{ end }}

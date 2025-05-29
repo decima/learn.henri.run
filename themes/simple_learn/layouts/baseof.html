@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="{{ site.Language.LanguageCode }}" dir="{{ or site.Language.LanguageDirection `ltr` }}">
+<head>
+    {{ partial "head.html" . }}
+</head>
+<body>
+<div class="container mx-auto">
+    <header class="print:hidden">
+        {{ partial "header.html" . }}
+
+        {{ block "breadcrumb" . }}
+            <div class="breadcrumbs px-1">
+                <ul>
+                    {{- range .Ancestors.Reverse }}
+
+                        <li>
+                            {{ partial "pageUrl.html" . }}
+
+                        </li>
+                    {{- end }}
+
+                    <li>
+                        {{ partial "pageUrl.html" . }}
+                    </li>
+                </ul>
+            </div>
+        {{ end }}
+    </header>
+    <main class="p-4">
+        {{ block "main" . }}{{ end }}
+    </main>
+    <footer>
+        Copyright &copy; {{ now.Year }} {{ site.Title }}
+        {{with .GetPage "license"}}
+            —
+            <a class="link" href="{{.Path}}">{{partial "title.html" . }}</a>
+        {{end}}
+    </footer>
+</div>
+
+{{/*{{partial "debug.html" .}}*/}}
+</body>
+</html>

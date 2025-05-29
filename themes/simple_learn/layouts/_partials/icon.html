@@ -1,0 +1,4 @@
+{{ $icon := resources.Get (printf "icons/%s.svg" .Kind) }}
+{{- if $icon }}
+    <img class="h-4 w-4 image inline" src="{{ $icon.RelPermalink }}"/>
+{{- end }}

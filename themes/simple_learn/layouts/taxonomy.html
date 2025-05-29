@@ -1,0 +1,12 @@
+{{ define "main" }}
+
+    <h1 class="title">{{ .Title }}</h1>
+    {{ .Content }}
+    <ul class="menu">
+        {{ range .Pages }}
+            <li>
+                {{partial "pageUrl.html" .}}
+            </li>
+        {{ end }}
+    </ul>
+{{ end }}

@@ -1,0 +1,27 @@
+<button class="btn" onclick="startPresentation('#presentation')">
+    {{partial "icon.html" (dict "Kind" "presentation")}}Presentation
+</button>
+<article class="presentation" id="presentation">
+    {{ $pages := (split .Content "<hr>") }}
+    <section class="bg-primary text-primary-content" style="
+    {{if .Param "cover"}}
+            background-image: url('{{.Param "cover"}}');
+            background-size: cover;
+            background-position: center;
+    {{end}}">
+        {{if not (.Param "hideTitle")}}
+            <h1 class="text-7xl font-black uppercase">
+                {{ partial "title.html" .}}
+            </h1>
+        {{end}}
+
+    </section>
+
+    {{range $k, $v := $pages }}
+
+        <section class="prose max-w-none">
+            {{ $v | safeHTML }}
+
+        </section>
+    {{end}}
+</article>

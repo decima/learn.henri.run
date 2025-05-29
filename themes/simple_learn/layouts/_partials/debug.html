@@ -1,0 +1,19 @@
+
+<div class="navbar bg-neutral text-neutral-content absolute bottom-0 w-full gap-4">
+    <div>
+        {{.Title}} - {{.Kind}} - {{.Path}}
+    </div>
+
+    <details>
+        <summary>global</summary>
+        <div class="text-xs">
+
+
+            {{if .Site.Params.description}}
+            {{end}}
+
+            {{debug.Dump .}}
+            {{debug.Dump .Page}}
+        </div>
+    </details>
+</div>

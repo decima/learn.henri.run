@@ -1,0 +1,24 @@
+{{ define "main" }}
+    {{partial "content.html" .}}
+    <div class="grid grid-cols-3 gap-4 mt-8">
+        {{ range .Site.Sections }}
+            {{if ne  .Params.ShowHome false }}
+
+                <div>
+                    <h2 class="title">
+                        {{.Title}}
+                    </h2>
+                    <article>
+                        {{.Summary}}
+                    </article>
+                    <ul class="menu">
+                        {{ range .Pages }}
+                            <li>
+                                {{partial "pageUrl.html" .}}
+                            </li>
+                        {{ end }}
+                </div>
+            {{end}}
+        {{end}}
+    </div>
+{{ end }}

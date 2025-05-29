@@ -1,0 +1,19 @@
+{
+  "devDependencies": {
+    "@parcel/watcher": "^2.5.1",
+    "@tailwindcss/cli": "^4.1.7",
+    "@tailwindcss/typography": "^0.5.16",
+    "daisyui": "^5.0.35",
+    "tailwindcss": "^4.1.7"
+  },
+  "dependencies": {
+    "bespoke": "^1.1.0",
+    "bespoke-bullets": "^1.1.0",
+    "bespoke-classes": "^1.0.0",
+    "bespoke-hash": "^1.1.0",
+    "bespoke-keys": "^1.1.0",
+    "bespoke-progress": "^1.0.0",
+    "bespoke-scale": "^1.0.1",
+    "bespoke-touch": "^1.0.0"
+  }
+}

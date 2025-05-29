@@ -1,0 +1,56 @@
+{{ define "main" }}
+    <div class="grid grid-cols-6 gap-4">
+        <div class="col-span-1">
+
+            {{ partial "terms.html" (dict "taxonomy" "tags" "page" .) }}
+            {{partial "presentation.html" .}}
+
+            {{ with .Parent }}
+                <h2 class="subtitle"><a href="{{.Path}}">{{partial "title.html" .}}</a></h2>
+                <ul class="menu">
+
+                    {{ range .Pages }}
+                        {{if ne .Path $.Path }}
+                            <li>
+                                {{partial "pageUrl.html" .}}
+                            </li>
+                        {{end}}
+                    {{ end }}
+                </ul>
+            {{end}}
+
+        </div>
+
+        <div class="col-span-{{if ne .Params.HideTOC true}}5{{else}}6{{end}}">
+            <h1 class="title">{{ .Title }}</h1>
+            {{if .Date }}
+                {{ $dateMachine := .Date | time.Format "2006-01-02T15:04:05-07:00" }}
+                {{ $dateHuman := .Date | time.Format ":date_long" }}
+                <time datetime="{{ $dateMachine }}">{{ $dateHuman }}</time>
+
+            {{ end }}
+
+            {{ partial "content.html" . }}
+
+
+        </div>
+        {{if .Params.TOC}}
+            <div class="col-span-1">
+                <h2 class="subtitle">Table of content</h2>
+                {{ .TableOfContents }}
+
+            </div>
+        {{end}}
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+{{ end }}
