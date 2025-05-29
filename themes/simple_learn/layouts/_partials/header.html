@@ -5,8 +5,20 @@
         <a href="{{.Site.Home.Path}}" class="btn btn-ghost text-xl">{{.Site.Title}}</a>
     </div>
 
-    <div class="flex-none">
-        <ul class="menu menu-horizontal gap-2 px-1">
+    <details class="dropdown md:hidden dropdown-end	">
+        <summary class="btn m-1">
+            {{partial "icon.html" (dict "Kind" "bars")}}
+        </summary>
+        <ul class="menu dropdown-content fixed bg-base-100 rounded-box z-1 w-52 p-2 shadow-sm gap-2 px-1">
+            {{ range .Site.AllPages}}
+                {{if .Params.ShowNav }}
+                    <li class=""><a href="{{.Path}}">{{.Title}}</a></li>
+                {{end}}
+            {{end}}
+        </ul>
+    </details>
+    <div class="flex-none hidden md:block">
+        <ul class="menu menu-horizontal gap-2 px-1 ">
             {{ range .Site.AllPages}}
                 {{if .Params.ShowNav }}
                     <li><a href="{{.Path}}">{{.Title}}</a></li>

@@ -1,0 +1,37 @@
+{{- /* layouts/_default/_markup/render-blockquote-alert.html */}}
+
+{{- if eq .Type "alert" -}}
+
+    {{- $alertLevel := dict
+    "note" (dict "color" "alert-info")
+    "tip" (dict "color" "alert-success")
+    "important" (dict "color" "alert-important")
+    "warning" (dict "color" "alert-warning")
+    "caution" (dict "color" "alert-error")
+    }}
+
+    {{- $type := cond (index $alertLevel .AlertType) .AlertType "note" }}
+    {{- $title := or .AlertTitle (title $type) }}
+    {{- $currentAlert := index $alertLevel $type }}
+    {{- $color := index $currentAlert "color"}}
+
+
+    <div role="alert" class="m-4 not-prose alert alert-outline {{ $color }} alert-vertical sm:alert-horizontal">
+        {{partial "icon.html" (dict "Kind"  (printf "alerts/%s"  $type))}}
+        <span>
+            <h3 class="font-bold text-xl">
+                {{ $title }}
+            </h3>
+
+            {{- with .Text }}
+                <div class="">{{.}}</div>
+            {{- end }}
+        </span>
+    </div>
+
+{{- else -}}
+    {{- /* This is a standard blockquote */}}
+    <blockquote>
+        {{ .Text }}
+    </blockquote>
+{{- end -}}

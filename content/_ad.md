@@ -1,0 +1,1 @@
+[![join the server](/discord_join.svg)](https://discord.gg/8uqQup6ZZ6)

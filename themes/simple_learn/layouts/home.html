@@ -1,6 +1,10 @@
 {{ define "main" }}
     {{partial "content.html" .}}
-    <div class="grid grid-cols-3 gap-4 mt-8">
+
+    <div class="w-full md:w-1/3">
+        {{partial "ad.html" .}}
+    </div>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mt-8">
         {{ range .Site.Sections }}
             {{if ne  .Params.ShowHome false }}
 
@@ -17,8 +21,11 @@
                                 {{partial "pageUrl.html" .}}
                             </li>
                         {{ end }}
+                    </ul>
                 </div>
             {{end}}
         {{end}}
+
     </div>
+
 {{ end }}

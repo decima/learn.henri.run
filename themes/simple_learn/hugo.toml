@@ -3,10 +3,8 @@ languageCode = 'en-US'
 title = 'My New Hugo Site'
 
 
-[module]
-
 [module.hugoVersion]
-extended = false
+extended = true
 min = '0.146.0'
 
 
@@ -14,4 +12,5 @@ min = '0.146.0'
 [[build.cachebusters]]
 source = '(postcss|tailwind)\.config\.js'
 target = 'css'
+
 

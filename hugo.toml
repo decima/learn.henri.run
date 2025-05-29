@@ -3,23 +3,9 @@ languageCode = 'en-US'
 theme = 'simple_learn'
 title = 'Learn.henri.run'
 
-[Params]
-    copyright = "cc-by"
 
+[markup.goldmark.renderHooks.link]
+enableDefault = true
 
-[menus]
-  [[menus.main]]
-    name = 'Home'
-    pageRef = '/'
-    weight = 10
-
-
-  [[menus.main]]
-    name = 'Tags'
-    pageRef = '/tags'
-    weight = 30
-
-[module]
-  [module.hugoVersion]
-    extended = false
-    min = '0.146.0'
+[markup.goldmark.renderer]
+unsafe = true

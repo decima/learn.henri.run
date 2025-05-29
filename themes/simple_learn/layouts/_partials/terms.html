@@ -11,13 +11,13 @@ For a given taxonomy, renders a list of terms assigned to the page.
 {{- $taxonomy := .taxonomy }}
 
 {{- with $page.GetTerms $taxonomy }}
-    {{- $label := (index . 0).Parent.LinkTitle }}
-    <div>
-        <h2 class="subtitle">{{ $label }}</h2>
-        <ul class="flex gap-2">
-            {{- range . }}
-                <li><a class="badge badge-primary" href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></li>
-            {{- end }}
-        </ul>
+    <div class="inline">
+        {{- range $index, $value :=  . }}
+            {{- with $value}}
+                {{- if ne $index 0 }}, {{end}}
+                <a class="" href="{{.Path}}"><span
+                            class="uppercase link">#{{partial "title.html" . }}</span></a>
+            {{- end}}
+        {{- end }}
     </div>
 {{- end }}

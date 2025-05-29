@@ -1,9 +1,9 @@
 {{ define "main" }}
-    <div class="grid grid-cols-6 gap-4">
-        <div class="col-span-1">
+    <div class="grid grid-cols-1 md:grid-cols-6  print:grid-cols-1 gap-4">
+        <div class="hidden md:block print:hidden col-span-1">
 
-            {{ partial "terms.html" (dict "taxonomy" "tags" "page" .) }}
             {{partial "presentation.html" .}}
+
 
             {{ with .Parent }}
                 <h2 class="subtitle"><a href="{{.Path}}">{{partial "title.html" .}}</a></h2>
@@ -21,21 +21,34 @@
 
         </div>
 
-        <div class="col-span-{{if ne .Params.HideTOC true}}5{{else}}6{{end}}">
-            <h1 class="title">{{ .Title }}</h1>
+        <!-- even col-span-5 or col-span-6 -->
+        <div class="{{if .Params.HideTOC }}col-span-5{{else}}col-span-4{{end}}">
+
+            {{if .Params.cover }}
+                <h1 class="title relative  text-black h-52 bg-cover bg-center"
+                    style="background-image:url({{.Params.cover}})">
+                    <span class="absolute bottom-0 m-4 bg-base-100/60 p-2">{{ .Title }}</span>
+                </h1>
+            {{else}}
+                <h1 class="title">
+                    {{ .Title }}
+                </h1>
+            {{end}}
             {{if .Date }}
                 {{ $dateMachine := .Date | time.Format "2006-01-02T15:04:05-07:00" }}
                 {{ $dateHuman := .Date | time.Format ":date_long" }}
                 <time datetime="{{ $dateMachine }}">{{ $dateHuman }}</time>
 
             {{ end }}
+            {{ partial "terms.html" (dict "taxonomy" "tags" "page" .) }}
+
 
             {{ partial "content.html" . }}
 
 
         </div>
-        {{if .Params.TOC}}
-            <div class="col-span-1">
+        {{if not .Params.HideTOC}}
+            <div class="col-span-1  print:hidden">
                 <h2 class="subtitle">Table of content</h2>
                 {{ .TableOfContents }}
 
