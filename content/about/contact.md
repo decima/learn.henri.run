@@ -4,8 +4,9 @@ title: Contact
 hideToc: true
 ---
 
-{{< cols >}}
-{{< col 2>}}
+<columns>
+<column flex-2>
+
 Depuis 2025, j'ai mis en place un serveur pour pouvoir échanger avec mes étudiants. ce serveur a pour vocation
 pédagogique et l'idée est de simplifier l'échange pour tout le monde !
 
@@ -14,14 +15,15 @@ pédagogique et l'idée est de simplifier l'échange pour tout le monde !
 > [!IMPORTANT]
 > Serveur Discord - the Corner™ - **https://discord.gg/8uqQup6ZZ6**
 
-{{< /col >}}
+</column>
 
-{{< col 1>}}
+<column flex-1>
+
 
 {{< ad >}}
 
-{{< /col >}}
-{{< /cols >}}
+</column>
+</columns>
 
 Vous souhaitez me contacter car vous avez une question, le plus simple reste par email, je vous demande donc de me
 contacter via l’adresse :
