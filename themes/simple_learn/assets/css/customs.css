@@ -1,0 +1,82 @@
+.presentation * hideOnSlides {
+    @apply hidden;
+}
+
+columns {
+    @apply flex gap-2;
+}
+
+@media print {
+    noPrint {
+        @apply hidden;
+    }
+
+    columns {
+        @apply flex flex-col;
+    }
+}
+
+
+credits {
+    @apply text-xs text-neutral-content;
+    @apply text-center;
+    @apply mt-4;
+}
+figcaption {
+    @apply text-xs;
+    @apply text-center;
+}
+
+
+:not(.prose) table {
+    @apply table table-xs table-zebra;
+}
+
+
+column, column[flex-1], flex-1 {
+    @apply flex-1;
+}
+
+column[flex-2], flex-2 {
+    @apply flex-2;
+}
+
+column[flex-3], flex-3 {
+    @apply flex-3;
+}
+
+column[flex-4], flex-4 {
+    @apply flex-4;
+}
+
+column[flex-5], flex-5 {
+    @apply flex-5;
+}
+
+column[flex-6], flex-6 {
+    @apply flex-6;
+}
+
+column[flex-7], flex-7 {
+    @apply flex-7;
+}
+
+column[flex-8], flex-8 {
+    @apply flex-8;
+}
+
+column[flex-9], flex-9 {
+    @apply flex-9;
+}
+
+column[flex-10], flex-10 {
+    @apply flex-10;
+}
+
+column[flex-11], flex-11 {
+    @apply flex-11;
+}
+
+column[flex-12], flex-12 {
+    @apply flex-12;
+}

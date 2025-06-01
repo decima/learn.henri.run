@@ -1,0 +1,43 @@
+
+.bespoke-bullet-inactive, section *:has(.bespoke-bullet-inactive) + :not(.bespoke-progress-parent) {
+    @apply opacity-0;
+}
+
+.bespoke-bullet-active {
+    @apply opacity-100;
+}
+
+.bespoke-bullet-current, .bespoke-bullet-current * {
+    @apply font-black;
+    @apply text-accent bg-black;
+}
+
+.presentation-container:has(.presentation:not(.bespoke-parent)) {
+    @apply hidden;
+}
+
+
+.presentation.bespoke-parent {
+    @apply w-screen h-screen absolute top-0 left-0;
+    @apply overflow-hidden;
+    @apply bg-white text-black;
+    font-size: 120%;
+
+
+}
+
+.bespoke-slide {
+    @apply w-full h-full flex items-center justify-center;
+}
+
+.bespoke-progress-parent {
+    @apply absolute bottom-0 left-0 w-full h-1 z-10;
+}
+
+.bespoke-progress-bar {
+    @apply opacity-100 h-full bg-accent;
+}
+
+.bespoke-inactive {
+    @apply hidden;
+}
