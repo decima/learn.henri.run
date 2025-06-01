@@ -5,19 +5,23 @@
             <h1 class="title">{{ .Title }}</h1>
 
             {{ partial "content.html" . }}
-            <div class="m-4">
-                {{range .Pages}}
-                    <div class="mb-4">
-                        <h2 class="text-2xl">
-                            {{partial "pageUrl.html" . false}}
-                        </h2>
-                        <article class="text-xs">
-                            {{ .Plain |safeHTML | strings.Truncate 300  }}
-                        </article>
-                    </div>
+
+            {{ range (
+            (.Pages.GroupByParam "type") |  append (dict
+            "Pages" (where .Pages "Params.type" nil)
+            )
+            ) }}
+                {{ with .Key }}
+                    <h2 class="title_subsection">{{.  |title}}</h2>
                 {{end}}
-            </div>
+                {{range  (.Pages.GroupByParam "level") }}
+                    {{ partial "sectionItems.html" .Pages }}
+                {{end}}
+                {{ partial "sectionItems.html" (where .Pages "Params.level" nil) }}
+            {{end}}
         </div>
+
+
         {{if .Params.TOC}}
 
             <div class="print:hidden">

@@ -1,3 +1,4 @@
-<article class=" prose max-w-none">
+{{ $prose := .Params.prose |default true }}
+<article class="{{if $prose}}prose max-w-none{{end}}">
     {{ .Content }}
 </article>

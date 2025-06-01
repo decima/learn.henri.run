@@ -4,25 +4,25 @@ import classes from "bespoke-classes";
 import progress from "bespoke-progress";
 import touch from "bespoke-touch";
 import bullets from "bespoke-bullets";
-import scale from "bespoke-scale";
 
 
-function startPresentation(selector) {
+const startPresentation = (selector) => {
     const plugins = [
         keys(),
         classes(),
         progress(),
         touch(),
         bullets('li, .bullet'),
-        scale(),
     ]
     const presentation = document.querySelector(selector);
 
     var deck = bespoke.from(presentation, plugins);
     window.deck = deck
+
     // Add fullscreen support
-    if (presentation.requestFullscreen) {
-        presentation.requestFullscreen().catch(err => {
+    presentation.parentNode.classList.remove("hidden")
+    if (presentation.parentNode.requestFullscreen) {
+        presentation.parentNode.requestFullscreen().catch(err => {
             console.error("Error attempting to enable fullscreen mode:", err);
         });
 

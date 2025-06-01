@@ -1,0 +1,6 @@
+<figure>
+    <img
+            src="{{ .Destination | safeURL }}"
+            alt="{{.PlainText}}"/>
+    <figcaption>{{.Title|markdownify}}</figcaption>
+</figure>
