@@ -7,15 +7,36 @@
 
             {{ with .Parent }}
                 <h2 class="subtitle"><a href="{{.Path}}">{{partial "title.html" .}}</a></h2>
-                <ul class="menu">
+                <ul class="menu menu-xs w-full">
 
-                    {{ range .Pages }}
-                        {{if ne .Path $.Path }}
+
+                    {{ range (
+                    (.Pages.GroupByParam "type") |  append (dict
+                    "Pages" (where .Pages "Params.type" nil)
+                    )
+                    ) }}
+                        {{if ne 0 (len .Pages) }}
                             <li>
-                                {{partial "pageUrl.html" .}}
+                                <details>
+                                    <summary>
+                                        {{partial "icon.html" (dict "Kind" "folder")}}
+
+                                        {{ with .Key }}
+                                            {{.  |title}}
+                                        {{else}}
+                                            See also
+                                        {{end}}
+                                    </summary>
+                                    <ul>
+                                        {{range  (.Pages.GroupByParam "level") }}
+                                            {{ partial "menuPageItems.html" .Pages }}
+                                        {{end}}
+                                        {{ partial "menuPageItems.html" (where .Pages "Params.level" nil) }}
+                                    </ul>
+                                </details>
                             </li>
                         {{end}}
-                    {{ end }}
+                    {{end}}
                 </ul>
             {{end}}
 

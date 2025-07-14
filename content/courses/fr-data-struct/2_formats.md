@@ -112,6 +112,7 @@ Une image vectorielle est donc un ensemble de coordonnées, d’attributs et de 
 l’écran ou sur papier) se charge d’interpréter.
 
 
+---
 
 <columns>
 <column flex-2>
@@ -127,16 +128,14 @@ l’écran ou sur papier) se charge d’interpréter.
 
 </column>
 <column>
-<noPrint>
 
-<svg viewBox="0 0 300 300">
+<svg viewBox="0 0 300 300" width="100%" height="">
     <rect x="0" y="0" width="200" height="200" fill="none" stroke="#999"/>
     <line x1="0" y1="0" x2="80" y2="80" stroke="black"/>
     <rect x="80" y="80" width="100" height="100"  fill="yellow"/>
     <circle cx="100" cy="100" r="50" stroke="red" fill="none"/>
 </svg>
 
-</noPrint>
 </column>
 </columns>
 
@@ -151,3 +150,504 @@ MIME Types
 | png       | Portable Network Graphics         | image/png     |
 | gif       | Graphics Interchange Format (GIF) | image/gif     |
 | svg       | Scalable Vector Graphics (SVG)    | image/svg+xml |
+
+---
+
+## Formats de video/audio
+
+<columns>
+<column>
+
+![](../images/analogic_numeric.png "Il existe une distinction entre les formats analogiques et les formats numériques.")
+
+</column>
+<column>
+
+Un format vidéo décrit comment un dispositif envoie des images d’une vidéo à un autre dispositif, de la même manière
+qu’un lecteur de DVD envoie des images à un téléviseur, ou un ordinateur à son moniteur.
+
+Plus formellement, le format visuel décrit l’ordre et la structure des images qui créent l’image vidéo.
+
+</column>
+
+</columns>
+
+---
+
+| Extension  | Type de document                            | MIME                    |
+|------------|---------------------------------------------|-------------------------|
+| .ogg       | OGG audio                                   | audio/ogg               |
+| .ogv       | OGG video                                   | video/ogg               |
+| .mp3       | MP3 audio                                   | audio/mpeg              |
+| .mp4       | MP4 video                                   | video/mp4               |
+| .avi       | AVI: Audio Video Interleave                 | video/x-msvideo         |
+| .mid .midi | Musical Instrument Digital Interface (MIDI) | audio/midi audio/x-midi |
+
+---
+
+## Parlons d’encodage
+
+Représentation d’une suite de caractères. Chaque caractère est stocké sous forme de nombre, et ce nombre se retrouve
+dans une table de correspondance avec les-dits caractères pour afficher la lettre.
+
+Il existe plusieurs tableaux d’encodage :
+
+- ASCII
+- ISO 8859
+- Unicode
+
+---
+
+### ASCII 🆗
+
+***American Standard Code** for **Information Interchange* - 1961**
+
+Limité à 128 caractères, c’est le standard américain en informatique. La particularité c'est que chaque caractère tient
+sur un byte. (c'est d'ailleurs ce qui a donné la taille de 8 bits à un byte).
+
+![ascii Table](../images/ascii_table.png "Liste de tous les caractères ASCII")
+
+---
+
+### Windows-1252/ISO 8859 💩
+
+Windows-1252 ou CP1252 est un jeu de caractères, utilisé historiquement par défaut sur le système d’exploitation
+Microsoft Windows en anglais et dans les principales langues d’Europe de l’Ouest, dont le français.
+
+<columns>
+<column flex-1>
+
+- ISO 8859-1 : Latin-1 Western European (1987)
+- ISO 8859-2 : Latin-2 Central European (1987)
+- ISO 8859-3 : Latin-3 South European (1988)
+- ISO 8859-4 : Latin-4 North European (1988)
+- ISO 8859-5 : Latin/Cyrillic (1988)
+- ISO 8859-6 : Latin/Arabic (1987)
+- ISO 8859-7 : Latin/Greek (1987)
+- ISO 8859-8 : Latin/Hebrew (1988)
+- … 1989, 1992,…
+- ISO 8859-16 : Latin-10 South-Eastern European (2001)
+
+</column>
+<column flex-2>
+
+![windows table](../images/windows_table.png "Tableau des caractères Windows-1252")
+
+</column>
+</columns>
+
+---
+
+### Unicode (ISO 10646) ❤️
+
+Unicode est un standard informatique qui permet des échanges de textes dans différentes langues, à un niveau mondial. Il
+est développé par le Consortium Unicode, qui vise au codage de texte écrit en donnant à tout caractère de n’importe quel
+système d’écriture un nom et un identifiant numérique, et ce de manière unifiée, quels que soient la plateforme
+informatique ou le logiciel utilisé.
+
+Unicode peut être encodé sur 1 à 4 Bytes (UTF-8) - soit 1,112,064 de caractères.
+
+<columns>
+<column>
+
+![unicode table](../images/utf8_table.png "Répartition des caractères Unicode")
+
+</column>
+<column>
+
+- Chaque petit carrés représente 256 caractères,
+- Chaque grand carrés représente 65536 caractères,
+- En bleu les caractères déjà assignés,
+- En blanc les espaces encore disponibles,
+- En vert les caractères privés.
+
+</column>
+<column>
+
+![utf8 usage](../images/utf8_wiki.png "Fréquence d'utilisation des caractères Unicode sur wikipedia, toutes langues confondues")
+
+> [!IMPORTANT] Utilisez UTF-8
+
+source : https://www.reedbeta.com/blog/programmers-intro-to-unicode/
+
+</column>
+</columns>
+
+---
+
+## Formats de donnée
+
+> [!NOTE] Un format de données est une convention
+
+---
+
+### Format TXT
+
+Le format **texte** est le format basique d’un fichier non binaire qui peut être lu par un humain. C’est le format le
+plus simple, car basique, et contient directement les caractères.
+Ce n'est pas un format optimisé pour les machines, mais il est simple à lire et à écrire.
+
+MIME : `text/plain`
+
+---
+
+### Format de structure
+
+Les formats de structures permettent de stocker de l’information structurée plus ou moins complexe.
+
+> [!NOTE] Chaque format a ses **avantages et inconvénients**, et le choix du format dépend uniquement de **la complexité
+de la donnée**.
+
+---
+
+### XML (eXtensible Markup Language)
+
+XML est un format ancien créé en 1996 et publié par la W3C. C’est un langage Human-Readable👩‍🦱 et Machine-Readable 🤖 car
+son objectif est de rester simple.
+
+<columns>
+<column>
+
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<books>
+    <book>
+        <id>ASI01</id>
+        <title>Foundation</title>
+        <author>Isaac Asimov</author>
+        <year>1951</year>
+    </book>
+</books>
+```
+
+</column>
+<column>
+
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<books>
+    <book id="ASI01">
+        <title>Foundation</title>
+        <author id="37"/>
+        <year>1951</year>
+    </book>
+</books>
+```
+
+</column>
+</columns>
+
+---
+
+### CSV (Comma-Separated Values)
+
+CSV est un format de données tabulaire dont les champs sont séparés par des virgules (`text/csv`).
+Une variante au CSV est le TSV (Tab-separated Values `text/tab-separated-values`)
+
+```
+id,title,author,year
+ASI01,Foundation,Isaac Asimov,1951
+ASI02,Foundation and Empire,Isaac Asimov,1952
+```
+
+Sa variante TSV :
+
+```
+id  title  author  year
+ASI01   Foundation  "Isaac Asimov"  1951
+```
+
+Et pour les cas complexes :
+
+```
+id,title,author,year
+ADA01,"Life, the Universe and Everything","Douglas Adams",1982
+```
+
+| Avantages                           | Inconvénients                              |
+|-------------------------------------|--------------------------------------------|
+| Simple                              | Simple                                     |
+| Facile à lire                       | **Ne permet pas les structures complexes** |
+| Représentation en tableau naturelle |                                            |
+
+---
+
+### JSON (JavaScript Object Notation)
+
+Format reprenant la structure javascript
+
+```json
+[
+  {
+    "id": "ASI01",
+    "title": "Foundation",
+    "author": "Isaac Asimov",
+    "year": 1951
+  },
+  {
+    "id": "ASI02",
+    "title": "Foundation and Empire",
+    "author": "Isaac Asimov",
+    "year": 1952
+  }
+]
+```
+
+---
+
+### YAML (Yet Another Markup Language)
+
+YAML est un format léger de structure de données utilisé pour des fichiers de configuration entre autres.
+
+<columns>
+<column>
+
+```yaml
+books:
+  - id: ASI01
+    title: Foundation
+    author: Isaac Asimov
+    year: 1951 #Good Year btw.
+  - id: ASI02
+    title: Foundation and Empire
+    author: Isaac Asimov
+    year: 1952
+```
+
+</column>
+<column>
+
+```yaml
+books:
+  ASI01:
+    title: Foundation
+    author: Isaac Asimov
+    year: 1951
+  ASI02:
+    title: "Foundation and Empire"
+    author: Isaac Asimov
+    year: 1952
+```
+
+</column>
+</columns>
+
+---
+
+<columns>
+<column>
+
+```yaml
+--- # Some separator
+authors:
+  "Isaac Asimov": &asimov
+    firstname: Isaac
+    lastname: Asimov
+ASI01:
+  title: Foundation
+  author: *asimov
+  year: 1951
+  description: |
+    Fondation est une chronique qui relate les 
+    grandes crises auxquelles la petite planète
+    Terminus devra faire face au fil des siècles,
+    et des grandes figures  qui marqueront son 
+    histoire dans l'ascension  de la Fondation 
+    vers le destin que lui a dessiné Hari Seldon :
+    devenir le berceau d'où naîtra le Nouvel Empire.
+```
+
+</column>
+<column>
+
+```yaml
+--- ## YAML Example
+ASI01:
+  author:
+    firstname: Isaac
+    lastname: Asimov
+  description: |-
+    Fondation est une chronique qui relate les 
+    grandes crises auxquelles la petite planète
+    Terminus devra faire face au fil des siè...
+  title: Foundation
+  year: 1951
+authors:
+  "Isaac Asimov": { firstname: "Isaac" , lastname: "Asimov" }
+```
+
+</column>
+</columns>
+
+---
+
+MIME : `application/x-yaml` ou `text/yaml` (⚠️ pas de standard international)
+
+| Avantages | Inconvénients                   |
+|-----------|---------------------------------|
+| Simple    | Structure faible/erratique      |
+| Complet   | Pas encore un standard W3C/ECMA |
+
+Un site marrant qui explique pourquoi pas yaml : https://noyaml.com/
+
+---
+
+### TOML (Tom's Obvious, Minimal Language)
+
+TOML est un format de fichier de configuration conçu afin d’être facile à lire et à écrire. La version 1.0.0 est sortie
+le **12 Janvier 2021**.
+
+```toml
+[books]
+# L'indentation est autorisée mais pas obligatoire
+[books.ASI01]
+title = "Foundation"
+author = "Isaac Asimov"
+year = 1951
+```
+
+MIME : `text/toml` (⚠️ pas de standard international)
+
+| Avantages | Inconvénients                                |
+|-----------|----------------------------------------------|
+| Simple    | Format peu pratique pour beaucoup de données |
+|           | Pas encore un standard W3C/ECMA              |
+|           | Très jeune et non adopté par tout le monde   |
+
+---
+
+### Les critères de choix d’un format
+
+| Cas d’usage                      | XML | CSV | JSON | YAML | TOML |
+|----------------------------------|-----|-----|------|------|------|
+| Stockage plat (tableaux, listes) | ❌   | ✅ ✅ | ✅    | ❌    | ❌    |
+| Stockage structuré               | ✅   | ❌   | ✅    | ❌    | ❌    |
+| Configuration                    | ❌   | ❌   | ❌    | ✅    | ✅    |
+
+---
+
+## Format de présentation
+
+Les formats de présentation sont des formats dont le but est de rendre une donnée finale de manière présentable et
+lisible par un être humain.
+
+> [!NOTE] Ces formats sont utilisés pour **restituer** l'information.
+
+---
+
+### HTML (HyperText Markup Language)
+
+HTML (et ses dérivés, HTM, XHTML) est un format de présentation de la donnée interprétée par un navigateur web. C’est un
+format simple qui est dérivé de XML, et qui a pour but de structurer des pages internet.
+
+```html
+
+<html>
+<head>
+    <title>Books</title>
+</head>
+<body>
+<div id="ASI01">
+    <h1>Foundation</h1>
+    <h2>Isaac Asimov - 1951</h2>
+    <p>Fondation est une <b>chronique</b> qui relate les grandes crises auxquelles la petite planète <i>Terminus</i>
+        devra faire face au fil des siècles, et des grandes figures qui marqueront son histoire dans l'ascension de
+        la Fondation vers le destin que lui a dessiné Hari Seldon : devenir le berceau d'où naîtra le Nouvel Empire.</p>
+</div>
+</body>
+</html>
+```
+
+MIME : `text/html`
+
+---
+
+### **Markdown️**
+
+MD est un format de mise en forme de texte simple et minimaliste. Ce cours est rédigé à 95 % en markdown.
+
+```markdown
+---   
+title: Books
+---   
+
+# Foundation
+
+## Isaac Asimov - 1951
+
+Fondation est une **chronique** qui relate les grandes crises auxquelles
+la petite planète _Terminus_ devra faire face au fil des siècles, et des
+grandes figures qui marqueront son histoire dans l'ascension de la Fondation
+vers le destin que lui a dessiné Hari Seldon : devenir le berceau d'où naîtra
+le Nouvel Empire.
+```
+
+`MIME :text/markdown`
+
+---
+
+### LaTeX (`/ˈlɑːtɛx/` `LAH-tekh`) 1984 🧔🏻
+
+LaTeX est un langage de présentation de données très utilisé dans le milieu académique.
+
+<columns>
+<column>
+
+```latex
+\documentclass{article}
+\usepackage{hyperref}
+\title{Fondation}
+\author{Isaac Asimov}
+\date{1951}
+\begin{document}
+\maketitle
+Fondation est une \textbf{chronique} qui relate les grandes 
+crises auxquelles la petite planète \textit{Terminus} devra 
+faire face au fil des siècles, et des grandes figures qui  
+marqueront son histoire dans l'ascension de la Fondation vers 
+le destin que lui a dessiné Hari Seldon : devenir le berceau 
+d'où naîtra le Nouvel Empire.
+\end{document}
+```
+
+</column>
+<column>
+
+![LaTex rendered](../images/latex_rendered.png "Some LaTeX rendered")
+
+</column>
+</columns>
+
+La grande force de LaTeX réside dans sa syntaxe mathématique
+
+<columns>
+<column>
+
+```latex
+\frac{n!}{k!(n-k)!} = \binom{n}{k}
+```
+
+</column>
+<column>
+
+![LaTex maths](../images/latex_maths.png "math formula example")
+
+</column>
+</columns>
+
+---
+
+### Les formats Office 💩
+
+Office jusqu’en 2007 utilisait un format fermé propriétaire (.doc, .xls, .ppt).
+
+En 2005, un nouveau standard a vu le jour, Office Open XML déployé pour la version 2007 de word/excel/…, qui est en
+réalité un format XML archivé. (docx, xlsx, pptx)
+
+MIME types :
+
+- docx : `application/vnd.openxmlformats-officedocument.wordprocessingml.document`
+- xlsx : `application/vnd.openxmlformats-officedocument.spreadsheetml.sheet`
+- pptx : `application/vnd.openxmlformats-officedocument.presentationml.presentation`
+
+🤮

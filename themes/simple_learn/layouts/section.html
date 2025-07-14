@@ -6,19 +6,29 @@
 
             {{ partial "content.html" . }}
 
+
             {{ range (
             (.Pages.GroupByParam "type") |  append (dict
             "Pages" (where .Pages "Params.type" nil)
             )
             ) }}
-                {{ with .Key }}
-                    <h2 class="title_subsection">{{.  |title}}</h2>
+                {{if ne 0 (len .Pages)}}
+
+
+                    <h2 class="title_subsection">{{partial "icon.html" (dict "Kind" "folder")}}
+                        {{ with .Key }}
+                            {{.  |title}}
+                        {{else}}
+                            See also
+                        {{end}}
+                    </h2>
+                    {{range  (.Pages.GroupByParam "level") }}
+                        {{ partial "sectionItems.html" .Pages }}
+                    {{end}}
+                    {{ partial "sectionItems.html" (where .Pages "Params.level" nil) }}
                 {{end}}
-                {{range  (.Pages.GroupByParam "level") }}
-                    {{ partial "sectionItems.html" .Pages }}
-                {{end}}
-                {{ partial "sectionItems.html" (where .Pages "Params.level" nil) }}
             {{end}}
+
         </div>
 
 
