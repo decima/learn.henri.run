@@ -69,8 +69,8 @@ On vous demande de réaliser un logiciel bancaire de gestion de comptes.
 
 ### Exercice 6
 
-Dans le contexte épidémiologique actuel, les personnes sont confinées chez elles. Elle peuvent se rendre à leur travail
-à la condition que leur entreprise leur a signé une autorisation enregistrée à la préfecture. Les personnes habitent
+Dans le contexte épidémiologique de 2020, les personnes étaient confinées chez elles. Elle pouvaient se rendre à leur travail
+à la condition que leur entreprise leur ait signé une autorisation enregistrée à la préfecture. Les personnes habitent
 dans un quartier, et l'entreprise peut se trouver dans un autre quartier.
 
 1. Définissez les différentes données qui vous semblent importantes pour définir un quartier, une entreprise, personne.
@@ -80,7 +80,7 @@ dans un quartier, et l'entreprise peut se trouver dans un autre quartier.
 
 ### Exercice 7
 
-Dans le contexte d'organisation du retour en présentiel, une école souhaite mettre en place une plateforme
+Dans le contexte d'organisation du retour en présentiel en 2021, une école souhaitait mettre en place une plateforme
 d'organisation des salles de cours pour ses promos, sachant que la distanciation sociale oblige à répartir les étudiants
 dans plusieurs salles. On veut mettre en place une plateforme ou des étudiants sont dans une promo, la promo a des cours
 de prévu dans plusieurs salles, mais on souhaite savoir pour un souci de suivi de cas-contact dans quelle salle, quel

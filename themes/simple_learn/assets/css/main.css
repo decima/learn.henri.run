@@ -94,3 +94,16 @@ summary {
     --depth: 0;
     --noise: 0;
 }
+
+questions{
+
+    @apply block;
+    @apply bg-gray-100;
+    @apply p-4
+}
+
+questions:before{
+    content: "Questions";
+    @apply text-xs block border-b;
+
+}

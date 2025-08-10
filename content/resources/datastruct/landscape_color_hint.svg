@@ -1,0 +1,33 @@
+<svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">
+
+    <rect x="0" y="0" width="300" height="200" fill="#87CEEB"/>
+    <text x="150" y="100" font-family="Arial" font-size="10" fill="rgba(0,0,0,0.2)" text-anchor="middle">
+        #87CEEB
+    </text>
+
+    <circle cx="250" cy="50" r="25" fill="#FFD700"/>
+    <text x="250" y="50" font-family="Arial" font-size="10" fill="rgba(0,0,0,0.2)" text-anchor="middle">
+        #FFD700
+    </text>
+
+
+    <path d="M 0,200 Q 100,50 200,200 Z" fill="#2E8B57"/>
+    <text x="100" y="180" font-family="Arial" font-size="10" fill="rgba(0,0,0,0.2)" text-anchor="middle">
+        #2E8B57
+    </text>
+
+    <path d="M 150,200 Q 225,100 300,200 L 150,200 Z" fill="#3CB371"/>
+
+    <text x="220" y="180" font-family="Arial" font-size="10" fill="rgba(0,0,0,0.2)" text-anchor="middle">
+        #3CB371
+    </text>
+
+    <text x="0" y="20" font-family="Arial" font-size="10"  font-weight="900" fill="#3399ff" text-anchor="start">
+        Ici, les collines murmurent en binaire.
+
+    </text>
+
+    <text x="190" y="20" font-family="Arial" font-size="5" fill="rgba(0,0,0,0.2)" text-anchor="middle">
+        #3399ff
+    </text>
+</svg>

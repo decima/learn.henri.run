@@ -1,0 +1,16 @@
+SCP-101-FR
+
+Objet	niveau de menace	Classe
+SCP-101-FR	Rouge	Keter
+
+ProcÃ©dures de Confinement SpÃ©ciales
+SCP-101-FR reprÃ©sente une brÃ¨che majeure dans la couverture de la Fondation. Ã‰tant donnÃ© qu'il est prÃ©sent sur l'Internet mondial et que ses serveurs (en supposant qu'il soit hÃ©bergÃ© sur des serveurs) sont impossibles Ã  localiser, l'opÃ©ration "Rose Ã‰carlate" a Ã©tÃ© mise en place.
+
+L'organisation de l'opÃ©ration "Rose Ã‰carlate" est dÃ©taillÃ©e plus bas.
+
+Description
+SCP-101-FR est un site internet ayant des capacitÃ©s de mimÃ©tisme numÃ©rique. SCP-101-FR est considÃ©rÃ© comme conscient de par sa capacitÃ© Ã  rÃ©agir contre une intrusion extÃ©rieure (piratage informatique) en envoyant un virus hautement infectieux rendant inutilisable l'ordinateur du pirate, puis en faisant Ã©voluer son code de maniÃ¨re Ã  combler la brÃ¨che informatique utilisÃ©e par le pirate.
+
+Son seul objectif semble Ãªtre de dÃ©voiler l'existence de la Fondation aux yeux du monde, c'est pourquoi il faut envisager que SCP-101-FR ait pu Ãªtre crÃ©Ã© par un Groupe d'IntÃ©rÃªt connaissant l'existence de la Fondation et cherchant Ã  lui nuire.
+
+SCP-101-FR consiste en un site disponible sur l'Internet mondial Ã  l'adresse "scpwiki.com". Ce site se trouve Ãªtre la rÃ©plique quasi-parfaite de l'actuelle base de donnÃ©es de la Fondation. Aucun serveur hÃ©bergeant SCP-101-FR n'a pu Ãªtre localisÃ©, toute tentative de remonter jusqu'aux serveurs ayant jusque lÃ  aboutit au crash de l'ordinateur effectuant la recherche ou Ã  son infection par un virus informatique.
