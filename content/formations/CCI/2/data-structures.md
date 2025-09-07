@@ -4,17 +4,30 @@ prose: false
 level: 1
 type: formations
 description: >
-    Ce cours traite de la donnée et de sa manipulation. Les concepts abordés sont les suivants :
-    - le typage de la donnée,
-    - les formats,
-    - les structures complexes.
+  Ce cours traite de la donnée et de sa manipulation. Les concepts abordés sont les suivants :
+  - le typage de la donnée,
+  - les formats,
+  - les structures complexes.
 hideTOC: true
 ---
+<h2 class="text-2xl mt-4 font-black">
+Formateur
+</h2>
+<hr/>
+Henri LARGET
 
-<style>
+<h2 class="text-2xl mt-4 font-black">
+Description du cours
+</h2>
+<hr/>
 
-</style>
-<table>
+Ce cours traite de la donnée et de sa manipulation. Les concepts abordés sont les suivants :
+
+- le typage de la donnée,
+- les formats,
+- les structures complexes.
+
+<table class="no-prose">
     <tr>
         <td>Séance</td>
         <td>Objectif Pédagogique</td>
@@ -146,3 +159,17 @@ Modélisation de structures de données
     </tr>
 
 </table>
+
+<h2 class="text-2xl mt-4 font-black">
+Modalités d'évaluation
+</h2>
+<hr/>
+
+- Projet en équipe (100% de la note finale)
+
+<h2 class="text-2xl mt-4 font-black">
+Ressources
+</h2>
+<hr/>
+
+Toutes les ressources du cours sont disponibles sur [learn.henri.run](https://learn.henri.run).
