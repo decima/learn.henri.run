@@ -1,14 +1,10 @@
 ---
-title: 201 - Structure de la donnée
+title: 202 - Bases de données
 prose: false
-level: 1
-type: formations
-description: >
-    Ce cours traite de la donnée et de sa manipulation. Les concepts abordés sont les suivants :
-    - le typage de la donnée,
-    - les formats,
-    - les structures complexes.
 hideTOC: true
+type: formations
+description: "Module de découverte des bases de données"
+level: 2
 ---
 
 <style>
@@ -33,7 +29,7 @@ Modélisation de structures de données
 </td>
 <td>Présentation du module</td>
 <td>00:10</td>
-<td>{{<page "presentation_datastruct">}}</td>
+<td>{{<page "presentation_databases">}}</td>
 <td>Présentation</td>
 </tr>
 <tr>

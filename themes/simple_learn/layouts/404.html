@@ -6,7 +6,7 @@
 {{ define "main" }}
 Why wouldn't you check one of this page and forget about what you've just seen ?
 <input id="random_original_content" type="hidden" value="{{.Pages|jsonify}}"/>
-<div id="random-pages">abc.</div>
+<div id="random-pages"></div>
 <script>
     var pages = JSON.parse(document.querySelector('#random_original_content').value);
     //get 5 random pages.

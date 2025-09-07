@@ -1,0 +1,6 @@
+{{- if .Title }}
+    {{ .Title |
+    replaceRE " - " "<br/>" |  safeHTML  }}
+{{- else }}
+    {{.File.BaseFileName}}
+{{- end}}

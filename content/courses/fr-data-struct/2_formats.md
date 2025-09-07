@@ -166,8 +166,6 @@ MIME Types
 Un format vidéo décrit comment un dispositif envoie des images d’une vidéo à un autre dispositif, de la même manière
 qu’un lecteur de DVD envoie des images à un téléviseur, ou un ordinateur à son moniteur.
 
-Plus formellement, le format visuel décrit l’ordre et la structure des images qui créent l’image vidéo.
-
 </column>
 
 </columns>
@@ -190,11 +188,16 @@ Plus formellement, le format visuel décrit l’ordre et la structure des images
 Représentation d’une suite de caractères. Chaque caractère est stocké sous forme de nombre, et ce nombre se retrouve
 dans une table de correspondance avec les-dits caractères pour afficher la lettre.
 
+<reveal>
+
 Il existe plusieurs tableaux d’encodage :
 
 - ASCII
 - ISO 8859
 - Unicode
+- ...
+
+</reveal>
 
 ---
 
@@ -215,7 +218,7 @@ Windows-1252 ou CP1252 est un jeu de caractères, utilisé historiquement par d�
 Microsoft Windows en anglais et dans les principales langues d’Europe de l’Ouest, dont le français.
 
 <columns>
-<column flex-1>
+<column flex-1 reveal>
 
 - ISO 8859-1 : Latin-1 Western European (1987)
 - ISO 8859-2 : Latin-2 Central European (1987)
@@ -506,7 +509,7 @@ author = "Isaac Asimov"
 year = 1951
 ```
 
-MIME : `text/toml` (⚠️ pas de standard international)
+MIME : `application/toml`
 
 | Avantages | Inconvénients                                |
 |-----------|----------------------------------------------|

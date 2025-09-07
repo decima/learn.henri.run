@@ -12,14 +12,9 @@
         {{end}}">
             {{if not (.Param "hideTitle")}}
                 <h1 class="text-7xl font-black uppercase
-                        absolute bottom-20 left-20
-                        {{if .Param "cover"}}
-                        bg-white/75
-                        p-4
-                        {{end }}
-                "
-                >
-                    {{ partial "title.html" .}}
+                        absolute bottom-20 right-0 left-42
+                        {{if .Param "cover"}}bg-white/75 p-4{{end }}">
+                    {{ partial "titleBr.html" .}}
                 </h1>
             {{end}}
 
@@ -31,8 +26,6 @@
                 <div class="p-4">
                     {{ $v | page.RenderString |
                     replaceRE "(<h[1-6][^>]+)id=\\\"[^\"]+\"" "$1" |
-                    replaceRE "</ul>" "<li class=\"hidden\"></li></ul>" |
-                    replaceRE "<li class=\"hidden\"></li></ul>\\s*$" "</ul>"|
                     safeHTML }}
                 </div>
             </section>
