@@ -12,7 +12,14 @@ const startPresentation = (selector) => {
         classes(),
         progress(),
         touch(),
-        bullets('li, .bullet'),
+        bullets(
+            [
+                'reveal',
+                'reveal li',
+                '[reveal]',
+                '[reveal] li',
+                '.bullet',
+            ].join(',')),
     ]
     const presentation = document.querySelector(selector);
 
@@ -35,12 +42,10 @@ const startPresentation = (selector) => {
     }
     window.onkeydown = function (e) {
         if (e.key === 'Escape') {
-
+            window.location.reload()
         }
     }
 }
 
 
 window.startPresentation = startPresentation
-
-

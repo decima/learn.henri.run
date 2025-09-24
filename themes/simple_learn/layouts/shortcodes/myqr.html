@@ -1,0 +1,3 @@
+{{ with images.QR (.Get "code") }}
+<img src="{{ .RelPermalink }}" class="qrcode"/>
+{{ end }}

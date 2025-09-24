@@ -33,23 +33,4 @@ si on me contacte après le module.
 
 ------
 
-<columns>
-<column flex-1>
-
-![](https://gravatar.com/avatar/e0922cc7660b5ba1ad72e5c36ea673ef?s=400&d=robohash&r=x)
-
-</column>
-<column flex-3>
-
-Et du coup, moi, c'est Henri, Backend Engineer chez **Lumapps**, solution d'intranet pour les entreprises.
-
-Historiquement :
-
-- Depuis 2024 chez **Lumapps** dans l’équipe **moteur de recherche** et **SRE**
-- 2 ans chez **Lepermislibre,** auto-école en ligne.
-- 6 ans chez **Aboutgoods Company**, entreprise spécialisée de collecte et traitement de la donnée de consommation
-- **Formateur** depuis 2016
-- Diplômé d’un Master E-services à Lille
-
-</column>
-</columns>
+{{< presentation >}}

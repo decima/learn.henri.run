@@ -51,10 +51,14 @@ l'Oberon.
 - Un problème algorithmique est souvent formulé comme la transformation d'un ensemble de valeurs, d'entrée, en un nouvel
   ensemble de valeurs, de sortie
 
+<reveal>
+
 **Quelques exemples ?**
 
 - **Une recette de cuisine ( ingrédients -> plat préparé )**
 - **La recherche dans un dictionnaire ( mot -> définition )**
+
+</reveal>
 
 ---
 
@@ -64,7 +68,8 @@ Différentes structures de données existent pour des données différentes ou r
 différentes :
 
 <columns>
-<column>
+<column reveal>
+
 
 Structures finies :
 
@@ -73,7 +78,7 @@ Structures finies :
 - **enregistrements**/**structures composées finies** (ligne d'un tableau);
 
 </column>
-<column>
+<column reveal>
 
 Structures indexées :
 
@@ -84,7 +89,7 @@ Structures indexées :
 - vecteurs ;
 
 </column>
-<column>
+<column reveal>
 
 Structures récursives :
 
@@ -105,14 +110,13 @@ des données manipulées dans un programme. Les types de données sont essentiel
 définissent comment les données sont stockées, manipulées et interprétées par le programme.
 
 <columns>
-<column flex-2>
+<column flex-2 reveal>
 
 ### Types de données primitifs
 
 - **Integer** : Représentent des nombres entiers, par exemple, 1, 2, -3.
 - **Float** : Représentent des nombres réels avec une partie décimale, par exemple, 3.14, -0.001.
-  > [!CAUTION] Attention
-  > des flottants peut varier selon l'implémentation et la taille du type.
+  > [!CAUTION] Attention aux problèmes d'arrondi avec les nombres à virgule flottante !
 - **Bool** : Représentent des valeurs de vérité, soit vrai (true) soit faux (false).
 - **Char** : Représentent des symboles uniques, par exemple, 'a', 'Z', '3'.
 
@@ -160,9 +164,9 @@ type ages []int
 
 ```go
 type person struct {
-name []rune
-age  int
-is_student bool
+    name []rune
+    age  int
+    is_student bool
 }
 ```
 
@@ -183,6 +187,10 @@ de données associé. Les enregistrements sont utilisés pour représenter des o
 
 ## Qu'est-ce qui motive la définition d'une structure d'une forme ou d'une autre ?
 
+<reveal>
+
 - La donnée en **entrée**
 - La donnée **attendue en sortie**
 - Le **traitement** même de la donnée
+
+</reveal>

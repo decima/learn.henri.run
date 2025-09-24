@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&display=swap');
 
 .bespoke-bullet-inactive, section *:has(.bespoke-bullet-inactive) + :not(.bespoke-progress-parent) {
     @apply opacity-0;
@@ -8,8 +9,7 @@
 }
 
 .bespoke-bullet-current, .bespoke-bullet-current * {
-    @apply font-black;
-    @apply text-accent bg-black;
+
 }
 
 .presentation-container:has(.presentation:not(.bespoke-parent)) {
@@ -22,8 +22,6 @@
     @apply overflow-hidden;
     @apply bg-white text-black;
     font-size: 120%;
-
-
 }
 
 .bespoke-slide {
@@ -40,4 +38,13 @@
 
 .bespoke-inactive {
     @apply hidden;
+}
+
+.bespoke-slide .qrcode {
+    width: 200%;
+}
+
+centered {
+    @apply flex flex-col items-center justify-center;
+    @apply text-center;
 }
