@@ -1,5 +1,5 @@
 ---
-title: 202 - Bases de données
+title: 202 - Bases de données (SQL-NoSQL)
 prose: false
 hideTOC: true
 type: formations
@@ -7,9 +7,20 @@ description: "Module de découverte des bases de données"
 level: 2
 ---
 
-<style>
+<h2 class="text-2xl mt-4 font-black">
+Formateur
+</h2>
+<hr/>
+Henri LARGET
 
-</style>
+<h2 class="text-2xl mt-4 font-black">
+Description du cours
+</h2>
+<hr/>
+
+Module de découverte de différentes bases de données (SQL et NoSQL) avec une approche pratique.
+
+
 <table>
     <tr>
         <td>Séance</td>
@@ -19,126 +30,163 @@ level: 2
         <td>Matériel Pédagogique</td>
         <td>Méthode Pédagogique</td>
     </tr>
-    <tr>
-        <td rowspan="6">1</td>
-        <td rowspan="6">
-
-**Types de données**
-
-Modélisation de structures de données
-</td>
+<tr>
+<td></td>
+<td></td>
 <td>Présentation du module</td>
-<td>00:10</td>
+<td></td>
 <td>{{<page "presentation_databases">}}</td>
 <td>Présentation</td>
 </tr>
-<tr>
-<td>Echange sur les attentes du module</td>
-<td>00:10</td>
-<td></td>
-<td>Échange</td>
-</tr>
-<tr>
-<td>Questionnaire d’entrée</td>
-<td>00:10</td>
-<td></td>
-<td>Questionnaire</td>
-</tr>
-<tr>
+    <tr>
+        <td rowspan="2">1</td>
+        <td rowspan="2">
+
+**PostgreSQL**
+
+Rappels sur le SQL<br/> Découverte de PostgreSQL
+
+</td>
 <td>Présentation</td>
-<td>01:00</td>
-<td>{{<page "1_data_types">}}</td>
+<td>00:30</td>
+<td>{{<page "postgresql">}}</td>
 <td>Présentation</td>
 </tr>
 <tr>
 <td>Exercices</td>
-<td>04:30</td>
-<td>{{<page "1_tp_data_types">}}</td>
+<td>03:00</td>
+<td>{{<page "1_tp_postgresql">}}</td>
 <td>Travaux Pratiques</td>
 </tr>
-<tr>
-<td>Mise en commun des exercices et correction</td>
-<td>01:00</td>
-<td></td>
-<td>Échange</td>
-</tr>
-<tr>
-<td rowspan="4">2</td>
-<td rowspan="4">
 
-**Format de la donnée : Format image (bitmap/vectoriel)**
 
-- Format Vidéo (Analogique/Numérique)<br/>
-- Format de structure (XML, JSON, CSV, YAML, TOML)
-- Format de présentation (HTML, Markdown, LaTeX)
-- Encodage
-- Conversions de formats de structure et de présentations
+<tr>
+<td rowspan="2">2</td>
+<td rowspan="2">
+
+**Redis**
+
+- Bases de données en mémoire<br/> Découverte de Redis
+- KV, Hash, List, Set, Sorted Set
 
 </td>
-        <td>Retour ce qui a été vu lors de la séance précédente</td>
-        <td>00:15</td>
-        <td></td>
-        <td>Échange</td>
-    </tr>
-    <tr>
-        <td>Présentation</td>
-        <td>01:00</td>
-<td>{{<page "2_formats">}}</td>
+<td>Présentation</td>
+<td>00:30</td>
+<td>{{<page "redis">}}</td>
         <td>Présentation</td>
     </tr>
     <tr>
         <td>Exercices</td>
-        <td>04:45</td>
-<td>{{<page "2_tp_formats">}}</td>
+        <td>03:00</td>
+<td>{{<page "2_tp_redis">}}</td>
         <td>Travaux Pratiques</td>
-    </tr>
-    <tr>
-        <td>Mise en commun des exercices et correction</td>
-        <td>01:00</td>
-        <td></td>
-        <td>Échange</td>
-    </tr>
-    <tr>
-        <td rowspan="6">3</td>
-        <td rowspan="6">
+</tr>
+<tr>
+    <td rowspan="2">3</td>
+    <td rowspan="2">
 
-**Manipulation de structures de données complexes**
+**MongoDB**
 
-- File d&#39;attentes<br/>- Piles<br/>- Listes chainées<br/>- Arbres<br/>- Graphes</td>
-  <td>Retour sur ce qui a été vu lors de la séance précédente</td>
-  <td>00:15</td>
-  <td></td>
-  <td>Échange</td>
-    </tr>
-    <tr>
+- Bases de données NoSQL<br/> Découverte de MongoDB
+- Documents, Collections, Requêtes
+
+</td>
         <td>Présentation</td>
-        <td>01:00</td>
-        <td>{{<page "3_list_trees_graphs">}}</td>
-        <td>Présentation</td>
-    </tr>
-    <tr>
-        <td>Exercices</td>
-        <td>04:45</td>
-        <td>{{<page "3_tp_list_trees_graphs">}}</td>
-        <td>Travaux Pratiques</td>
-    </tr>
-    <tr>
-        <td>Présentation du sujet d’évaluation</td>
         <td>00:30</td>
-        <td>Evaluation - aventure textuelle</td>
-        <td></td>
+        <td>{{<page "mongodb">}}</td>
+        <td>Présentation</td>
     </tr>
     <tr>
-        <td>Questionnaire de sortie</td>
-        <td>00:15</td>
-        <td></td>
-        <td>Questionnaire</td>
+        <td>Exercices</td>
+        <td>03:00</td>
+        <td>{{<page "3_tp_mongodb">}}</td>
+        <td>Travaux Pratiques</td>
+</tr>
+
+
+<tr>
+    <td rowspan="2">4</td>
+    <td rowspan="2">
+
+**Elasticsearch**
+
+- Bases de données NoSQL<br/> Découverte d'Elasticsearch
+- Index, Rercherche full-text, Agrégations
+
+</td>
+        <td>Présentation</td>
+        <td>00:30</td>
+        <td>{{<page "elasticsearch">}}</td>
+        <td>Présentation</td>
     </tr>
     <tr>
-        <td>Rétrospective du module</td>
-        <td>00:15</td>
-        <td></td>
-        <td>Échange</td>
+        <td>Exercices</td>
+        <td>03:00</td>
+        <td>{{<page "4_tp_elasticsearch">}}</td>
+        <td>Travaux Pratiques</td>
+</tr>
+
+
+<tr>
+    <td rowspan="2">5</td>
+    <td rowspan="2">
+
+**Neo4J**
+
+- Bases de données Graph<br/> Découverte de Neo4J
+- Noeuds, Relations, Propriétés, Cypher
+
+</td>
+        <td>Présentation</td>
+        <td>00:30</td>
+        <td>{{<page "neo4j">}}</td>
+        <td>Présentation</td>
     </tr>
+    <tr>
+        <td>Exercices</td>
+        <td>03:00</td>
+        <td>{{<page "5_tp_neo4j">}}</td>
+        <td>Travaux Pratiques</td>
+</tr>
+
+
+
+<tr>
+    <td rowspan="2">6</td>
+    <td rowspan="2">
+
+**Bases de données alternatives**
+
+- XML, XPath, XQuery
+- Time Series (InfluxDB)
+
+</td>
+        <td>Présentation</td>
+        <td>02:30</td>
+        <td></td>
+        <td>Présentation</td>
+    </tr>
+    <tr>
+        <td>Exercices</td>
+        <td>02:00</td>
+        <td>Evaluation</td>
+        <td>QCM</td>
+</tr>
 
 </table>
+
+
+<h2 class="text-2xl mt-8 font-black">
+Modalités d'évaluation
+</h2>
+<hr/>
+
+- Questionnaire type QCM individuel (30% de la note finale)
+- Projet en équipe (70% de la note finale)
+
+<h2 class="text-2xl mt-8 font-black">
+Ressources
+</h2>
+<hr/>
+
+Toutes les ressources du cours sont disponibles sur [learn.henri.run](https://learn.henri.run).
