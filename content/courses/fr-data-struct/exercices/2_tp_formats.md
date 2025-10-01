@@ -58,7 +58,7 @@ Je souhaite stocker les notes d'étudiants dans ma base. Un étudiant (Nom/Prén
 
 ## Exercice 3
 
-Je souhaite formatter les données suivantes en plusieurs JSON, proposez une structure adaptée :
+Je souhaite formatter les données suivantes en plusieurs **CSV**, proposez une structure adaptée :
 
 ```json
 [
