@@ -126,59 +126,7 @@ $mainQueue->len();
 
 ------------------------------------------------------------------------------------------------------------------------------------
 
-## Exercice 3 - Decouverte des listes chaînées (PHP)
-
-On va créer ensemble un système de gestion de listes chaînées en PHP en utilisant un tableau associatif.
-Cet exercice a pour objectif de vous familiariser avec la récursivité et les références en PHP.
-
-### Étape 1 : Créer un noeud
-
-Pour commencer, nous allons créer une fonction `createNode` qui va créer un noeud de liste chaînée.
-Un noeud est un tableau associatif qui contient deux clés :
-
-- `value` : la valeur du noeud
-- `next` : la référence au noeud suivant (initialement `null`)
-
-Voici la signature de la fonction :
-
-```php
-<?php
-function createNode($value);
-```
-
-à Partir de là, on va créer un noeud avec la valeur "ROOT".
-
-### Étape 2 : Ajouter un noeud.
-
-Créer une fonction `addNode` qui va prendre 2 noeuds en paramètre : le noeud principal et le nouveau noeud à ajouter.
-La fonction doit ajouter le nouveau noeud à la fin de la liste chaînée et renvoyer le noeud $head mis à jour.
-
-```php
-<?php
-function addNode($head, $newNode);
-```
-
-### Étape 3 : Afficher un noeud et son contenu
-
-Créer une fonction `printNode` qui va afficher le contenu d'un noeud et de tous les noeuds suivants.
-
-```php
-<?php
-function printNode($node);
-```
-
-### Étape 4 : refaire l'exercice en utilisant des références
-
-En comprenant comment fonctionne les références en PHP, refaire l'exercice précédent en utilisant des références pour
-les noeuds.
-
-<questions>
-Quel est l'avantage d'utiliser des références dans ce cas ?
-</questions>
-
-------------------------------------------------------------------------------------------------------------------------------------
-
-## Exercice 4 (PHP)
+## Exercice 3 (PHP)
 
 Téléchargez le fichier <a href="/resources/datastruct/e5.csv" download>e5.csv</a>.
 
@@ -204,6 +152,13 @@ while (!feof($file)) {
     $row = array_combine($headers, $line);
     $data[]=$row;
 }
+```
+
+Créez un fichier `exercice3.php` et placez-y le code ci-dessus.
+Ensuite, pour exécuter le code, utilisez la commande suivante dans votre terminal :
+
+```bash
+php exercice3.php
 ```
 
 </details>
@@ -286,7 +241,7 @@ Pour faciliter les choses, l'id `n` a forcément un parent compris entre 0 et `n
 
 ------------------------------------------------------------------------------------------------------------------------------------
 
-## Exercice 5
+## Exercice 4
 
 
 <columns>
@@ -312,7 +267,7 @@ Dans cet exercice, on va partir sur ce graphe de données :
 
 -------------------------------------------------------------------------------------------------------------------------
 
-## Exercice 6
+## Exercice 5
 
 Voici un arbre généalogique :
 
@@ -334,6 +289,58 @@ Voici un arbre généalogique :
 
 </questions>
 
+
+-----------------------------------
+
+## Exercice 6 (à venir) - Decouverte des listes chaînées (PHP)
+
+On va créer ensemble un système de gestion de listes chaînées en PHP en utilisant un tableau associatif.
+Cet exercice a pour objectif de vous familiariser avec la récursivité et les références en PHP.
+
+### Étape 1 : Créer un noeud
+
+Pour commencer, nous allons créer une fonction `createNode` qui va créer un noeud de liste chaînée.
+Un noeud est un tableau associatif qui contient deux clés :
+
+- `value` : la valeur du noeud
+- `next` : la référence au noeud suivant (initialement `null`)
+
+Voici la signature de la fonction :
+
+```php
+<?php
+function createNode($value);
+```
+
+à Partir de là, on va créer un noeud avec la valeur "ROOT".
+
+### Étape 2 : Ajouter un noeud.
+
+Créer une fonction `addNode` qui va prendre 2 noeuds en paramètre : le noeud principal et le nouveau noeud à ajouter.
+La fonction doit ajouter le nouveau noeud à la fin de la liste chaînée et renvoyer le noeud $head mis à jour.
+
+```php
+<?php
+function addNode($head, $newNode);
+```
+
+### Étape 3 : Afficher un noeud et son contenu
+
+Créer une fonction `printNode` qui va afficher le contenu d'un noeud et de tous les noeuds suivants.
+
+```php
+<?php
+function printNode($node);
+```
+
+### Étape 4 : refaire l'exercice en utilisant des références
+
+En comprenant comment fonctionne les références en PHP, refaire l'exercice précédent en utilisant des références pour
+les noeuds.
+
+<questions>
+Quel est l'avantage d'utiliser des références dans ce cas ?
+</questions>
 
 
 
