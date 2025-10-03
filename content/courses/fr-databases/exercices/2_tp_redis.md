@@ -13,7 +13,7 @@ La bibliothèque Redis utilisée est [node redis](https://github.com/NodeRedis/n
 Interface admin :
 
 ```bash
-https://compass.henri.run
+https://redis.henri.run
 ```
 
 URL de connexion redis :
