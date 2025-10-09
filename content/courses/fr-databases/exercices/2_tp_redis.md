@@ -65,11 +65,11 @@ console.log(data);
 À partir du fichier `superheroes.json`, créer 6 sets :
 
 - `champion:creation:gender` qui contiendra tous les genres possibles stockés dans le json.
-- `champion:creation:race` qui contiendra toutes les races possibles stockés dans le json.
+- `champion:creation:race` qui contiendra toutes les races possibles stockées dans le json.
 - `champion:creation:eye` qui contiendra toutes les couleurs d'yeux possibles stockés dans le json.
 - `champion:creation:hair` qui contiendra toutes les couleurs de cheveux possibles stockés dans le json.
 - `champion:creation:alignment` qui contiendra tous les alignements possibles des héros.
-- `champion:creation:name` qui contiendra tous les mots possible de super héros (pour cela il va falloir séparer les noms de chaque héros en fonction des espaces et autres caractères). Puis afficher toutes les valeurs pour chaque set.
+- `champion:creation:name` qui contiendra tous les mots possibles de super héros (pour cela il va falloir séparer les noms de chaque héros en fonction des espaces et autres caractères). Puis afficher toutes les valeurs pour chaque set.
 
 > Attention ! certaines valeurs peuvent être inexistantes ou contenir "-" comme données.
 >
