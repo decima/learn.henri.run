@@ -1,6 +1,6 @@
 ---
 title: Elasticsearch
-description: Une base de données NoSQL orientée document.
+description: Une base de données optimisée pour la recherche full-text
 cover: ../images/elasticsearch_cover.jpg
 type: 1_courses
 level: 4
