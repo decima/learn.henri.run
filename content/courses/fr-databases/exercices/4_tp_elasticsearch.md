@@ -97,6 +97,7 @@ level: 4
 - En autorisant les fautes de frappes, trouvez tous les documents où le prénom est "Eve".
 
 #### Agrégations
+
 - Comptez le nombre de documents par genre.
 - Trouvez la date de naissance la plus ancienne.
 - Trouvez la date de naissance la plus récente.
@@ -109,3 +110,26 @@ level: 4
 
 Pour cet exercice, vous allez utiliser l'index `festivals`.
 L'index `festivals` contient des documents avec les champs suivants :
+
+1. Quels sont les festivals dont le nom contient le mot "Rock" ?
+2. Lister les festivals de Musique qui se déroulent dans le département de la Gironde
+3. Trouver les festivals qui ont été créés entre 1980 et 1990 (inclus).
+4. Quels sont les festivals situés à moins de 100 kilomètres d'Annecy (coordonnées approx. 45.904775, 6.124210) ?
+5. Afficher les festivals de la région Bretagne qui n'ont pas de site web renseigné.
+
+Aggrégations (Chaque question doit être réalisée avec une seule requête) :
+
+6. Quel est le top 10 des disciplines principales ayant le plus de festivals ?
+7. Quelle est l'année de création du plus ancien festival répertorié dans la base de données ?
+8. Pour la discipline principale Musique, quelle est la répartition des festivals par sous-catégorie ?
+9. Pour chaque région, quelles sont les statistiques sur l'année de création des festivals (le plus ancien, le plus
+   récent et la moyenne) ?
+10. Pour chaque discipline principale, quel est le festival le plus récemment créé ? Affichez son nom et son année de
+    création.
+11. En partant du centre de Paris (coordonnées approx. latitude 48.85, longitude 2.35),
+    combien de festivals trouve-t-on dans les cercles de distance suivants :
+    - Moins de 100 km
+    - Entre 100 et 250 km
+    - Entre 250 et 500 km
+    
+    Et pour chaque cercle, quelle est la répartition des disciplines principales des festivals ?
