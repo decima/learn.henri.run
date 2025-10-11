@@ -36,8 +36,7 @@ sudo apt-get install php8.4-common php8.4-cli
 
 ### Autre ?
 
-N’hésitez pas à me contacter via discord ou via
-les [Règles pour me contacter](https://www.notion.so/R-gles-pour-me-contacter-bec795ae99ad483b9fa6f160e39e9aab?pvs=21)
+N’hésitez pas à me contacter via discord ou via le menu de {{<page "contact">}}
 
 ## MacOS 🍏🍎
 
