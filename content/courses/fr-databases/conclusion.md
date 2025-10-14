@@ -281,4 +281,5 @@ https://db-engines.com/en/ranking
 
 ---
 
-{{<myqr code="https://henri.run/r/trQ" >}}
+# henri.run/r/OTc
+{{<myqr code="https://henri.run/r/OTc" >}}
