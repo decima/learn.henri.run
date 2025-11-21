@@ -38,7 +38,7 @@ Contexte et Données
 
 Chaque groupe peut récupérer un export d'archive de données de visionnage Netflix.
 
-[Télécharger l'archive](/resources/db/netflix_report.zip)
+[Télécharger l'archive](https://github.com/decima/learn.henri.run/raw/refs/heads/main/content/resources/db/netflix-report.zip)
 
 Il est également possible d'utiliser une archive personnelle si vous avez un compte Netflix en récupérant vos propres
 données via [votre compte](https://www.netflix.com/account/getmyinfo).
