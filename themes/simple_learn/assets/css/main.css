@@ -2,6 +2,7 @@
 
 @import "tailwindcss";
 @import "customs.css";
+@import "code.css";
 @import "slides.css";
 
 * {

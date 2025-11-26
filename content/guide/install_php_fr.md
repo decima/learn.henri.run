@@ -10,8 +10,8 @@ date: 2025-05-30
 Si vous lisez ces lignes, c’est que vous avez la (mal)chance d’avoir un cours avec moi, et on va avoir besoin de PHP.
 Pour gagner du temps, si vous utilisez vos machines, **veillez vous assurer d’avoir tous les outils à votre disposition.
 **
-Pour les besoins du cours, je souhaite vous faire travailler sous **PHP 8.4**, dernière version de PHP en date, et *
-*rien d’autre**.
+Pour les besoins du cours, je souhaite vous faire travailler sous **PHP 8.5**, et 
+**rien d’autre**.
 
 > [!IMPORTANT]
 > En votre qualité d’étudiant, vous pouvez télécharger et installer **phpstorm** l’IDE JetBrains **GRATUITEMENT**.
@@ -31,7 +31,7 @@ sudo apt-get update
 Une fois les bibliothèques mises à jour, il ne reste plus qu'à installer php :
 
 ```
-sudo apt-get install php8.4-common php8.4-cli
+sudo apt-get install php8.5-common php8.5-cli
 ```
 
 ### Autre ?
@@ -44,7 +44,7 @@ Le plus simple pour installer PHP 8 sur Mac OSX est d'installer d'abord Homebrew
 Une fois installé, lancez la commande dans le terminal :
 
 ```shell
-brew install php
+brew install php@8.5
 ```
 
 ## Windows 🤢
@@ -79,7 +79,7 @@ Ce programme vous permet d’avoir un terminal proche des autres systèmes.
 
 [PHP For Windows: Binaries and sources Releases](https://windows.php.net/download/)
 
-et téléchargez la dernière version de PHP 8.4 (*VS17 x64 Non Thread Safe (2025-May-06 14:19:42)*), en version **NON
+et téléchargez la dernière version de PHP 8.5 (*VS17 x64 Non Thread Safe (2025-May-06 14:19:42)*), en version **NON
 THREAD SAFE.**
 
 Dé-archivez l’archive, et déplacez le dossier à la racine de `C:/` et nommez le `php`.
@@ -98,14 +98,14 @@ Vous pouvez utiliser docker si vous le souhaitez.
 Pour cela, il faudra récupérer l’image docker de php :
 
 ```shell
-docker pull php:8-4
+docker pull php:8.5-alpine
 ```
 
 À partir de là, je recommande de définir un alias dans votre invite de commande/terminal vers cette commande qui vient
 remplacer le classique php
 
 ```shell
-docker run -v $(pwd):/app -p 8000:8000 php:8.4 php
+docker run --rm -it -v $(pwd):/app -w /app -p 8000:8000 php:8.5-alpine ash
 ```
 
 ### Vérifier sa configuration
@@ -119,10 +119,11 @@ php -v
 Si ce message s’affiche, c’est que tout est bon :
 
 ```
-PHP 8.4.5 (cli) (built: Mar 12 2025 01:55:56) (NTS)
+PHP 8.5.0 (cli) (built: Nov 20 2025 19:49:31) (NTS)
 Copyright (c) The PHP Group
-Zend Engine v4.4.5, Copyright (c) Zend Technologies
-    with Zend OPcache v8.4.5, Copyright (c), by Zend Technologies
+Built by https://github.com/docker-library/php
+Zend Engine v4.5.0, Copyright (c) Zend Technologies
+    with Zend OPcache v8.5.0, Copyright (c), by Zend Technologies
 ```
 
 Pour vérifier que tout est ok :

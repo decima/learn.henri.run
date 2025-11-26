@@ -2,6 +2,19 @@
     @apply hidden;
 }
 
+.prose .highlight code {
+    @apply text-primary;
+}
+
+.highlight {
+    @apply border-1 border-base-300 rounded-lg bg-base-200;
+}
+
+.mermaid {
+    background: transparent !important;
+}
+
+
 columns {
     @apply flex gap-2;
 }
@@ -22,6 +35,7 @@ credits {
     @apply text-center;
     @apply mt-4;
 }
+
 figcaption {
     @apply text-xs;
     @apply text-center;
