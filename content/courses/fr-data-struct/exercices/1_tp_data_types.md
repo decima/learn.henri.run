@@ -48,8 +48,8 @@ motivé que ce soit par le supérieur hiérarchique ou les RH.
 
 ### Exercice 4
 
-On vous demande de réaliser un réseau social de type **Instagram** 🏞️. **(**ou **Facebook** 👴🏼, **~~Twitter~~ X** ou *
-*LinkedIn**)
+On vous demande de réaliser un réseau social de type **Instagram** 🏞️. **(**ou **Facebook** 👴🏼, **~~Twitter~~ X** ou 
+**LinkedIn**)
 
 1. Quelles sont les données importantes à stocker ?
 2. Proposez une description des différentes structures de données.

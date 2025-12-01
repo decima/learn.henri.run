@@ -45,10 +45,13 @@
         <!-- even col-span-5 or col-span-6 -->
         <div class="{{if .Params.HideTOC }}col-span-5{{else}}col-span-4{{end}}">
 
-            {{if .Params.cover }}
+            {{if and (.Params.cover) (not .Params.hideCoverOnCourse) }}
                 <h1 class="title relative  text-black h-52 bg-cover bg-center"
                     style="background-image:url({{.Params.cover}})">
-                    <span class="absolute bottom-0 m-4 bg-base-100/60 p-2">{{ .Title }}</span>
+                    {{ if not .Params.hideTitleOnCover }}
+                            <span class="absolute bottom-0 m-4 bg-base-100/60 p-2">{{ .Title }}
+                    {{end}}
+
                 </h1>
             {{else}}
                 <h1 class="title">
