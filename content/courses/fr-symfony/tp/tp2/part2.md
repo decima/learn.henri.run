@@ -8,7 +8,7 @@ type: parties
 
 Récupérez le projet via cette url :
 
-[](https://github.com/decima/sf-tp2/archive/refs/tags/part2.zip)
+[TP2 Part2.zip](https://github.com/decima/sf-tp2/archive/refs/tags/part2.zip)
 
 Allez ensuite avec votre terminal, dans le dossier en question, et avant de continuer il va falloir installer les
 dépendances composer. L'archive contient déjà un dossier composer mais pas de dossier `vendor`.
