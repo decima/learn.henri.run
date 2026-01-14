@@ -74,7 +74,7 @@ voir [Travail de groupe, évaluation et gestion des conflits](/about/teamwork/)
 
 Le rendu se fera via **git**, sur la plateforme [Github](https://github.com/) . L'utilisateur **decima** devra être invité dans chacun de vos projets pour permettre l'accès aux différents rendus et historique de travail du projet. Aucun travail ne sera évalué en dehors de la plateforme git et de la plateforme testée en ligne.
 
-Date limite de rendu : April 18, 2025 11:59 PM
+Date limite de rendu : 2026-03-01T23:59:59
 
 **Tous les commits après cette date ne seront pas pris en compte lors de l’évaluation du code**
 
